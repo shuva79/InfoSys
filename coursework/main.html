@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="bonsai, ecommerce, plants">
+    <title>Bonsai</title>
+
+    <link rel="stylesheet" href="main.css"> <!--Links to the css element-->
+</head>
+<body style="margin: 0;">
+    <header>
+        <div class="container">
+                    <a href="main.html" id="logo">Bonsai</a> <!--Put logo here-->
+                                            <!--Links to other pages-->
+                    <ul >  
+                        <li><a href="main.html" class="links home">Home</a></li>                <!--Home Page-->
+                        
+                        <li><a href="blog.html" class="links">Blog</a></li>                <!--Blog Page-->
+                        
+                        <li><a href="store.html" class="links">Store</a></li>            <!--Store Page-->
+                        
+                        <li><a href="research.html" class="links">Research</a></li>        <!--Research Page-->
+                        
+                        <li><a href="about.html" class="links">About Us</a></li>           <!--About US Page-->
+                    </ul>
+        </div>
+    </header>
+    <img src="bonsai.jpg" alt="bonsai" id="bonsai_pic">
+
+    <script>
+        this.window.addEventListener('scroll', function()
+        {
+            var scrollTop = window.pageYOffset;
+            //pageYOffset returns the num of pixels the document has been scrolled vertically
+            var image = document.getElementById('bonsai_pic');
+            //getElementById searches for an ID named 'bonsai_pic'
+            image.style.filter = 'blur(' + scrollTop / 150 + 'px)';
+            // .style.filter adds visual effects like blur into images
+            // Here, it takes blur(value) and in place of the value, we have kept a variable which changes value dynamically
+        });
+    </script>
+    <script src="main.js"></script>
+    <h1 id="bonsai">Bonsai</h1>
+</body>
+</html>

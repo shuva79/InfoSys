@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*tells the browser to account for any border and padding in the values you specify*/
+  /*For eg, if our content takes more space including the padding, the browser allows it*/
+  /*written a bit in detail in my MST wala notebook, ask me if you dont understand*/
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #c7c7c7;
+  width: 100%;
+  height: 500vh; /*vh means viewport height*/
+  /*height so that we can scroll down the screen*/
+}
+
+.container {
+  /*Absolute means its position value is fixed*/
+  /*Sticky means Relative(when normal) and Fixed (when scrolled) and the top,right,bottom, left values are active*/
+  /*The top and left 0 means it'll stay at the top left corner*/
+  /*The navigation bar will take 100% of the width of the browser*/
+  /*The values in padding shows top padding is 30px and left and right padding is 100px*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  /*Wraps texts acc to screen size*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /*justify content defines how the browser distributes space between and around content items*/
+  /*space-between ensures items will have space between them*/
+  align-items: center;
+}
+.container #logo {
+  color: #000000;
+  font-weight: 700; /*thiccness of characters*/
+  font-size: 2em; /*1em = 2 inches or 16 pixels*/
+  text-transform: uppercase; /*controls text case*/
+  text-decoration: none;
+}
+.container ul {
+  display: flex;
+  justify-content: center; /*Aligns the list items in the center of container*/
+  /*They were positioned on the top right before this*/
+  list-style: none; /*Removes the bullet thingy from list*/
+}
+.container ul li {
+  margin-left: 20px;
+}
+.container ul li .links {
+  color: black;
+  padding: 6px 15px;
+  /*Removes the underling thingy from links*/
+  text-decoration: none;
+}
+.container ul li a:hover, .container ul li .home {
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+#bonsai_pic {
+  display: block;
+  top: 15%;
+  left: 40%;
+  position: fixed;
+  background-position: center;
+}
+
+#bonsai {
+  position: fixed;
+  top: 55%;
+  left: 50px;
+  white-space: nowrap;
+}
+
+/*# sourceMappingURL=main.css.map */
