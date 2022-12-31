@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about.css">
+    <title>About us</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="nav_bar">
+                <a href="main.html" id="logo">Bonsai</a> <!--Put logo here-->
+                <!--Links to other pages-->
+                <ul >  
+                    <li><a href="main.html" class="links home">Home</a></li>                <!--Home Page-->
+                    
+                    <li><a href="blog.html" class="links blog">Blog</a></li>                <!--Blog Page-->
+                    
+                    <li><a href="store.html" class="links store">Store</a></li>            <!--Store Page-->
+                    
+                    <li><a href="research.html" class="links research">Research</a></li>        <!--Research Page-->
+                    
+                    <li><a href="about.html" class="links about">About Us</a></li>           <!--About US Page-->
+                </ul>
+            </div>
+        </header>
+        
+        <div class="scroll-container">  <!--The scroll snap starts from here-->
+
+                <!-- scroll class contains the snap on scroll thingy -->
+                <!-- Start of First scroll snap -->
+                <div class="scroll" id="text" contenteditable="">      <!--Contenteditable allows us to actually edit in browser-->
+                    Meet the team
+                </div>
+                <script type="text/javascript">
+                    var text = document.getElementById('text');
+                    var sdow = '';
+                    
+                    for (var i = 0; i < 50; i++)
+                    {
+                            sdow += (sdow? ',':'')+i*1+"px "+ i*1+ "px 0 #f00;";
+                            // document.write(sdow);
+                            //shadow += (shadow ? ',' : '') + i * 1+'px' + i*1+ 'px 0 #fff'; 
+                            text.style.textShadow = sdow;
+                        } 
+                </script>
+                
+                <!-- Note to my dumbass:
+                    the '--clr' is a variable so it changes value acc to person's card
+                -->
+                <!-- Start of second scroll snap -->
+                <div class="scroll" id="scroll1">
+                    <h1>Research</h1>
+                    <!-- card class is responsible for the card outline/boundary when we hover over the image 
+                        and holding the content inside it 
+                        and making the image disappear during transition
+                    -->
+                    <div class="card" id="ankit_card">
+                        <!-- The --clr is a variable which contains a colour hex, canary yellow in this case -->
+                        <!-- This value is used in css portion by using var() function -->
+
+                        <!-- circle class is responsible for filling the card class with colour
+                            aka the transition we see
+                        -->
+                        <div class="circle" style="--clr:#ffef00" id="ankit_circle">
+                            <img src="Ankit.png" class="members" id="ankit_pic" alt="Ankit Photo">
+                        </div>
+                        
+                        <!-- content holds the info about the person inside the card -->
+
+                        <div class="content" id="ankit_content">
+                            <h2>Ankit</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod aliquam dolore laudantium id ipsam ducimus. Eos ab nisi velit repudiandae placeat voluptatibus iure excepturi facilis et, quaerat enim sint quo hic cum dignissimos doloremque. Sequi labore dolor amet quo blanditiis quam debitis iure, molestiae nobis doloremque inventore eum, unde placeat!</p>
+                            <a href="#" target="_blank">Know more</a>
+                        </div>
+                    </div>
+
+                    <div class="card" id="barun_card">
+                        <div class="circle" style="--clr:#fab493" id="barun_circle">
+                            <img src="Barun.png" class="members" id="barun_pic" alt="Barun Photo">
+                        </div>
+                        <div class="content" id="barun_content">
+                            <h2>Barun</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni in quod autem repudiandae non officia eius doloremque inventore facilis error, neque praesentium ducimus eum maiores provident adipisci mollitia deserunt maxime.</p>
+                            <a href="#" target="_blank">Know more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Start of third scroll snap -->
+                <div class="scroll" id="scroll2">
+                    <h1>Development</h1>
+                    <div class="card"  id="nirjal_card">
+                        <div class="circle" style="--clr: #342e30" id="nirjal_circle" >
+                            <img src="Nirjal.png" class="members" alt="" id="nirjal_pic">
+                        </div>
+                        <div class="content" id="nirjal_content">
+                            <h2>Nirjal</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia eaque dolorem pariatur quo quam! Obcaecati vel hic officia repudiandae, magnam voluptatum amet. Doloremque, accusamus recusandae sunt eum itaque molestiae placeat.</p>
+                            <a href="#" target="_blank">Know more</a>
+                        </div>
+                    </div>
+
+                    <div class="card" id="raja_card">
+                        <div class="circle" style="--clr:#fab493" id="raja_circle">
+                            <img src="Barun.png" class="members" id="barun_pic" alt="Barun Photo">
+                        </div>
+                        <div class="content" id="raja_content">
+                            <h2>Raja</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni in quod autem repudiandae non officia eius doloremque inventore facilis error, neque praesentium ducimus eum maiores provident adipisci mollitia deserunt maxime.</p>
+                            <a href="#" target="_blank">Know more</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Start of fourth scroll snap -->
+                <div class="scroll" id="scroll3">
+                    <h1>Development</h1>
+                    <div class="card" id="shuva_card">
+                        <div class="circle" style="--clr:#4a4037" id="shuva_circle">
+                            <img src="Shuva.png" class="members" id="shuva_pic" alt="">
+                        </div>
+                        <div class="content" id="shuva_content">
+                            <h2>Shuva</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus quos quae laborum odit, rerum vitae nostrum deserunt corrupti quisquam, molestiae aut ab ducimus sapiente pariatur doloribus, dolore officiis nobis at nihil blanditiis. Omnis, optio quam?</p>
+                            <a href="#" target="_blank">Know more</a>
+                        </div>
+                    </div>
+
+                    <div class="card" id="sandwich_card">
+                        <div class="circle" style="--clr:#ddba92" id="sandwich_circle">
+                            <img src="sandwich.png" class="members" id="sandwich_pic" alt="">
+                        </div>
+                        <div class="content" id="sandwich_content">
+                            <h2>Sandwich</h2>
+                            <p>He's a sandwich.</p>
+                            <a href="https://twitter.com/boggodan/status/1507642443767992321" target="_blank">Know more</a>
+                        </div>
+                    </div>
+
+                </div>
+            
+            </div>
+        </div>    
+</div>
+        
+</body>
+</html>

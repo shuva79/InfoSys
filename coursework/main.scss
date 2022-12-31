@@ -44,6 +44,8 @@ body
         color: #000000;
         font-weight: 700; /*thiccness of characters*/
         font-size: 2em;     /*1em = 2 inches or 16 pixels*/
+        /*em stands for emphemeral unit*/
+        /*em is favourable than px or cm because it is relative to parent's font size*/
         text-transform: uppercase;  /*controls text case*/
         text-decoration: none;
     }    
@@ -74,6 +76,8 @@ body
                 background-color: #fff;
                 border-radius: 15px;
             }
+
+            
         }
     }
 }
@@ -92,8 +96,14 @@ body
 #bonsai
 {
     position: fixed; 
-    top: 55%;
-    left: 50px;
-    white-space: nowrap;
+    top: 50%;
+    left: 44%;
+    filter: opacity(0%);
+    white-space: nowrap;    /*Defines how white-space is treated inside an elements*/
+    /*nowrap will not break the sentence (or wrap around) into another line
+    but rather continue the sentence as is*/
+
+    /* For better explaination about nowrap: 
+    https://www.w3schools.com/cssref/playdemo.php?filename=playcss_white-space&preval=nowrap */
     
 }

@@ -30,7 +30,7 @@
     <img src="bonsai.jpg" alt="bonsai" id="bonsai_pic">
 
     <script>
-        this.window.addEventListener('scroll', function()
+        this.window.addEventListener('scroll', function() //this refers to the objects, window in this case
         {
             var scrollTop = window.pageYOffset;
             //pageYOffset returns the num of pixels the document has been scrolled vertically
@@ -41,7 +41,11 @@
             // Here, it takes blur(value) and in place of the value, we have kept a variable which changes value dynamically
         });
     </script>
-    <script src="main.js"></script>
+    
     <h1 id="bonsai">Bonsai</h1>
+    
+    <script src="main.js"></script>
+    
+
 </body>
 </html>

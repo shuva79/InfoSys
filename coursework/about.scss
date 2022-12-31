@@ -1,0 +1,443 @@
+*                   /*The "*" selects all the elements aka universal selector or apply styles to all elements*/
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*tells the browser to account for any border and padding in the values you specify*/
+    /*For eg, if our content takes more space including the padding, the browser allows it*/
+    /*written a bit in detail in my MST wala notebook, ask me if you dont understand*/
+
+    font-family: "Poppins", sans-serif;
+}
+
+body
+{
+    background-color: #c7c7c7;
+    width: 100%;
+    
+}
+
+.container{
+    position: relative;
+    height: 500vh;
+
+    .nav_bar
+    {
+        /*Absolute means its position value is fixed*/
+        /*Sticky means Relative(when normal) and Fixed (when scrolled) and the top,right,bottom, left values are active*/
+        /*The top and left 0 means it'll stay at the top left corner*/
+        /*The navigation bar will take 100% of the width of the browser*/
+        /*The values in padding shows top padding is 30px and left and right padding is 100px*/
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 30px 100px;
+    
+
+        
+        
+        /*Wraps texts acc to screen size*/
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        /*justify content defines how the browser distributes space between and around content items*/
+        /*space-between ensures items will have space between them*/
+        align-items: center;
+        
+
+        #logo
+        {
+            color: #383838;
+            font-weight: 700; /*thiccness of characters*/
+            font-size: 2em;     /*1em = 2 inches or 16 pixels*/
+            text-transform: uppercase;  /*controls text case*/
+            text-decoration: none;
+        }    
+
+        ul
+        {
+            display: flex;
+            justify-content: center; /*Aligns the list items in the center of container*/
+            /*They were positioned on the top right before this*/
+            list-style: none;   /*Removes the bullet thingy from list*/
+
+            li
+            {
+                margin-left: 20px;
+                
+                .links
+                {
+                    color: #383838;
+                    
+                    padding: 6px 15px;
+                    
+                    /*Removes the underling thingy from links*/
+                    text-decoration: none;
+                }
+
+                a:hover, .about
+                {
+                    background-color: #fff;
+                    border-radius: 15px;
+                }
+            }
+        }
+    }
+
+    /* the scroll snapping feature is possible through the scroll-container and .scroll classes */
+    .scroll-container
+    {
+        overflow: auto;        /* adds scroll bars to content because it is too big to fit in a line */ 
+        scroll-snap-type: y mandatory;  /* snaps to next vertical content instantly */
+        /* mandatory helps the content to rest exactly on next slide when scrolled */
+        margin: 0px auto; /* top margin takes 0px and the left and right margin is auto */ 
+        /* here, auto means that the left and right margins are increased until it becomes centred along y-axis of viewport */
+        height: 100vh;
+
+        .scroll
+        {
+            max-width: 100%;
+            font: 50px;
+            height: 100vh;
+            scroll-snap-align: start;
+            margin: 0 auto;
+            
+            h1
+            {
+                display: flex;
+                justify-content: center;
+                padding-top: 2.5%;
+                font-size: 5em;
+                color: #ffffff;
+                font-weight: 200;
+                
+            }
+        }
+
+        #scroll1, #scroll3
+        {
+            background-color: #1d1d1d;
+        }
+
+        #text
+        {
+            color: #383838;
+            font-weight: 700;
+            font-size: 10em;
+            width: 100%;
+            text-align: center;
+            outline: none;
+            text-shadow: 1px 1px 0 #fff;   /*height_shadow     vertical_shadow     blur-radius     colour */
+            background-color: aqua;
+            
+        }     
+    }
+}
+
+.card            /* this is the thing shown when we hover above the circle */
+{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 20px;
+    border-radius: 30px;
+    transition: 0.6s;
+    transition-delay: 0.2s;
+    overflow: hidden;       /* this eliminates the overflow when you over in it */
+    /* without it, the card was rectangle with sharp corners when hovered */
+
+    display: flex;
+    justify-content: flex-start; /* items are positioned at the beginning of a container */
+    align-items: center;
+
+    .circle         /*this is the place the circle takes inside the card*/
+    /*note: Use background to see which part does what job*/
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+
+        /*aligns image inside the circle at the center*/
+        display: flex;
+        /*  justify-content — controls alignment of all items on the x-axis.
+            align-items — controls alignment of all items on the y-axis.
+        */
+        justify-content: center;    
+        align-items: center;
+
+        .members                /*image size and position mentioned here*/
+        {
+            position: relative;
+            width: 350px;
+            border-radius: 50%;
+        }
+    }
+
+    .circle::before /*this is what happens after the cursor is hovered*/
+    {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        clip-path: circle(120px at center);
+        transition: 0.5s;
+        background: var(--clr);
+    }
+    
+
+}
+
+.card:hover
+{
+    /*Card is visible upon hover with 0.1 sec delay*/
+    width: 600px;
+    transition-delay: 0.1s;
+
+    .circle 
+    {
+        .members /*image disappears on hovering*/
+        {
+            transform: scale(0);        
+            /*transform allows us to move, rotate, scale and skew elements*/
+            /*In this case, when we hover over an image, it disappears using the transform: scale(0)*/
+            /*scale(0) decreases the width of the element to 0 (both horizontal and vertical)*/
+        }
+    }
+}
+
+.card:hover .circle::before
+{
+    clip-path: circle(400px at center); /*responsible for the circle to expand to set pixels from center when hovered*/
+    /*we need the value to be max so it provides an illusion of the card changing colour*/
+}
+
+.content
+{
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px; /* top    right   bottom  left */
+    opacity: 0;
+    transition: 0.5s;
+    visibility: hidden;     /* hides the content but still takes space */
+}
+
+.card:hover 
+{
+    .content
+    {
+        left: 0;
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0.5s;
+    }
+}
+
+#ankit_card     /* ankit card position here */
+{
+    top: 50px;
+    margin-left: 15%;
+}
+
+#ankit_content      /* ankit info properties inside here when hovered */
+{
+        h2
+        {
+            color: #0036c9;
+            font-size: 3em;
+            line-height: 1em;       /*sets distance between each line*/
+        }
+
+        p
+        {
+            color: #000000;
+        }
+        
+        a
+        {
+            position: relative;
+            color: #000000;
+            background: #fff;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-top: 10px;
+            padding: 0.5em;
+            display: inline-block;      /* the padding takes effect by using this*/
+            font-weight: 200;
+        }
+}
+
+#barun_card
+{
+    top: -475px;
+    margin-left: 55%;
+}
+
+#barun_content      /* barun info properties inside here when hovered */
+{
+        h2
+        {
+            color:#011017;
+            font-size: 3em;
+            line-height: 1em;       /*sets distance between each line*/
+        }
+
+        p
+        {
+            color: #000000;
+        }
+        
+        a
+        {
+            position: relative;
+            color: #000000;
+            background: #fff;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-top: 10px;
+            padding: 0.5em;
+            display: inline-block;      /* the padding takes effect by using this*/
+            font-weight: 200;
+        }
+}
+
+#nirjal_card     /* nirjal card position here */
+{
+    top: 50px;
+    margin-left: 15%;
+}
+
+#nirjal_content      /* nirjal info properties inside here when hovered */
+{
+        h2
+        {
+            color: #fef8f8;
+            font-size: 3em;
+            line-height: 1em;       /*sets distance between each line*/
+        }
+
+        p
+        {
+            color: #d7f382;
+        }
+        
+        a
+        {
+            position: relative;
+            color: #000000;
+            background: #fff;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-top: 10px;
+            padding: 0.5em;
+            display: inline-block;      /* the padding takes effect by using this*/
+            font-weight: 200;
+        }
+}
+
+#raja_card
+{
+    top: -475px;
+    margin-left: 55%;
+}
+
+#raja_content      /* raja info properties inside here when hovered */
+{
+        h2
+        {
+            color:#011017;
+            font-size: 3em;
+            line-height: 1em;       /*sets distance between each line*/
+        }
+
+        p
+        {
+            color: #000000;
+        }
+        
+        a
+        {
+            position: relative;
+            color: #000000;
+            background: #fff;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-top: 10px;
+            padding: 0.5em;
+            display: inline-block;      /* the padding takes effect by using this*/
+            font-weight: 200;
+        }
+}
+
+#shuva_card     /* shuva card position here */
+{
+    top: 50px;
+    margin-left: 15%;
+}
+
+#shuva_content      /* shuva info properties inside here when hovered */
+{
+        h2
+        {
+            color: #f3ddbf;
+            font-size: 3em;
+            line-height: 1em;       /*sets distance between each line*/
+        }
+
+        p
+        {
+            color: #000000;
+        }
+        
+        a
+        {
+            position: relative;
+            color: #000000;
+            background: #fff;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-top: 10px;
+            padding: 0.5em;
+            display: inline-block;      /* the padding takes effect by using this*/
+            font-weight: 200;
+        }
+}
+
+#sandwich_card
+{
+    top: -475px;
+    margin-left: 55%;
+}
+
+#sandwich_content      /* raja info properties inside here when hovered */
+{
+        h2
+        {
+            color:#032432;
+            font-size: 3em;
+            line-height: 1em;       /*sets distance between each line*/
+        }
+
+        p
+        {
+            color: #000000;
+        }
+        
+        a
+        {
+            position: relative;
+            color: #000000;
+            background: #fff;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-top: 10px;
+            padding: 0.5em;
+            display: inline-block;      /* the padding takes effect by using this*/
+            font-weight: 200;
+        }
+}
