@@ -13,8 +13,12 @@ body
 {
     background-color: #c7c7c7;
     width: 100%;
-    height: 500vh;  /*vh means viewport height*/
+    min-height: 300vh;  /*vh means viewport height*/
     /*height so that we can scroll down the screen*/
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .container
@@ -29,6 +33,9 @@ body
     left: 0;
     width: 100%;
     padding: 30px 100px;
+    height: 100px;
+    
+    
     
     /*Wraps texts acc to screen size*/
     display: flex;
@@ -90,14 +97,18 @@ body
         left: 40%;
         position: fixed;
         background-position: center;
+        z-index: 0;
+       
 
     }
 
 #bonsai
 {
     position: fixed; 
-    top: 50%;
-    left: 44%;
+    background: #fff;
+    padding: 10px;
+    top: 20%;
+    left: 10%;
     filter: opacity(0%);
     white-space: nowrap;    /*Defines how white-space is treated inside an elements*/
     /*nowrap will not break the sentence (or wrap around) into another line
@@ -105,5 +116,125 @@ body
 
     /* For better explaination about nowrap: 
     https://www.w3schools.com/cssref/playdemo.php?filename=playcss_white-space&preval=nowrap */
-    
+    font-size: 6em;
 }
+
+#text_content
+{
+    
+    position: fixed; 
+    top: 40%;
+    left: 10%;
+    filter: opacity(0%);
+    white-space: nowrap;    /*Defines how white-space is treated inside an elements*/
+    /*nowrap will not break the sentence (or wrap around) into another line
+    but rather continue the sentence as is*/
+
+    /* For better explaination about nowrap: 
+    https://www.w3schools.com/cssref/playdemo.php?filename=playcss_white-space&preval=nowrap */
+
+    display: flex;
+    width: 100%;
+    
+    ul
+    {
+        list-style: none;
+        font-size: 2em;
+
+        ol 
+        {
+            list-style: none;
+            font-size: 0.5em;
+        }
+    }
+}
+
+.footer
+{
+    z-index: 2;     /*this overlaps over the image*/
+
+    footer
+    {
+        position: static;   /*this helps the footer to stay at the bottom*/
+        bottom: 0;      /*position relative to the bottom*/
+        background-color: #171717; 
+        width: 100%;
+        height: 250px;
+        display: flex;      /*defines the footer section as a box*/
+      
+        
+        
+        
+        #footer_map
+        {
+            flex: 30%;
+            padding-left: 10px;
+            padding-top: 5px;
+
+            iframe          /*this is the embedded map on the footer*/
+            {
+                width: 400px;
+            }
+            
+        }
+
+        #footer2, #footer3
+        {
+            padding-left: 10px;
+            padding-top: 15px;
+            
+        }
+
+        #footer2
+        {
+            flex: 45%;      /*divides the footer box to 45% for the middle box*/
+            display: flex;  /*We make the footer2 div a box again so that we can divide two boxes,
+            contact and socials in an equally spaced manner*/
+            
+            #contact, #socials
+            {
+                flex: 50%;  /*equally divides footer2 into 2 halves*/
+            }
+
+            #socials
+            {
+                
+
+                img
+                {
+                    padding: 5px;
+                }
+            }
+        }
+
+        #footer3
+        {
+            flex: 25%;
+        }
+
+        .footer_text
+        {
+            color: #ecbe1a;
+            font-weight: 500;   /*boldness of text*/
+        }
+
+        .footer_text_info
+        {
+            color: #cecece;
+        }
+
+        ul
+        {
+            list-style: none;       /*removes the listing dot thingy*/
+            line-height: 30px;      /*vertical spacing between lines*/
+
+            a
+            {
+                text-decoration: none;  /*removes underlined thingy from link*/
+                color: #cecece;
+            }
+        }
+    } 
+}
+
+
