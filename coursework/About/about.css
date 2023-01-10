@@ -11,6 +11,7 @@
 body {
   background-color: #c7c7c7;
   width: 100%;
+  overflow-y: hidden;
 }
 
 .container {
@@ -145,6 +146,15 @@ body {
   transition: 0.5s;
   background: var(--clr);
 }
+.card .hover_pic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  height: 250px;
+  transition: 0.5s;
+  transition-delay: 0s;
+}
 
 .card:hover {
   /*Card is visible upon hover with 0.1 sec delay*/
@@ -156,6 +166,12 @@ body {
   /*transform allows us to move, rotate, scale and skew elements*/
   /*In this case, when we hover over an image, it disappears using the transform: scale(0)*/
   /*scale(0) decreases the width of the element to 0 (both horizontal and vertical)*/
+}
+.card:hover .hover_pic {
+  transform: translate(-50%, -50%) scale(1);
+  transition-delay: 0.5s;
+  left: 72%;
+  border-radius: 20px;
 }
 
 .card:hover .circle::before {

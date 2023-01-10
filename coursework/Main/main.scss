@@ -13,13 +13,13 @@ body
 {
     background-color: #c7c7c7;
     width: 100%;
-    min-height: 300vh;  /*vh means viewport height*/
-    /*height so that we can scroll down the screen*/
+    
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
 
 .container
 {
@@ -28,7 +28,7 @@ body
     /*The top and left 0 means it'll stay at the top left corner*/
     /*The navigation bar will take 100% of the width of the browser*/
     /*The values in padding shows top padding is 30px and left and right padding is 100px*/
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -89,6 +89,8 @@ body
     }
 }
 
+
+
 #bonsai_pic
     {
       
@@ -98,54 +100,252 @@ body
         position: fixed;
         background-position: center;
         z-index: 0;
-       
+    }
+
+.main
+    {
+        min-height: 200vh;  /*vh means viewport height*/
+        /*height so that we can scroll down the screen*/
+        #bonsai
+        {
+            position: sticky;   /*makes sure that the text goes away after the div ends*/
+            
+            padding-left: 250px;
+            padding-bottom: 30px;
+            top: 40%;
+            
+            filter: opacity(0%);
+            white-space: nowrap;    /*Defines how white-space is treated inside an elements*/
+            /*nowrap will not break the sentence (or wrap around) into another line
+            but rather continue the sentence as is*/
+
+            /* For better explaination about nowrap: 
+            https://www.w3schools.com/cssref/playdemo.php?filename=playcss_white-space&preval=nowrap */
+            font-size: 6em;
+        }
+    }
+
+
+.home_part
+{
+    min-height: 75vh;
+    position: static;
+    display: flex;
+    z-index: 1;
+
+    .content_part
+    {  
+        
+        flex: 30%;
+        flex-wrap: wrap; 
+        background: #7BF07B;
+        padding: 20px;
+        
+        h2
+        {
+            position: relative;
+            top: 20%;
+            color: #4949b4;
+            font-size: 5em;
+        }
+
+        p
+        {
+            position: relative;
+            top: 20%;
+            color: #1c1787;
+            font-size: 1.8em;
+            font-weight: 300;
+        }
+
+        h1
+        {
+            position: relative;
+            top: 20%;
+            font-size: 3em;
+            color: #060344;
+        }
+   }
+
+   .image_part
+   {
+        flex: 60%;
+        img
+        {
+            height: 100%;
+            width: 100%;
+        }
+   }
+}
+
+.in_between
+{
+    height: 150px;
+    font-size: 5em;
+    padding: 20px;
+    z-index: 1;
+    font-weight: 550;
+    color: #022831;
+    background-color: #7bd9f0;
+}
+
+.blog_part
+{
+    position: static;
+    height: 90vh;
+    z-index: 1;
+    display: flex;
+
+    .image_part
+    {
+        background: #7b7bf0;
+        flex: 60%;
+        img
+        {
+            height: 75vh;
+            
+            width: 100%;
+        }
+
+        h3
+        {
+            padding: 20px;
+            color: #fff;
+            font-size: 2em;
+
+           
+        }
 
     }
 
-#bonsai
-{
-    position: fixed; 
-    background: #fff;
-    padding: 10px;
-    top: 20%;
-    left: 10%;
-    filter: opacity(0%);
-    white-space: nowrap;    /*Defines how white-space is treated inside an elements*/
-    /*nowrap will not break the sentence (or wrap around) into another line
-    but rather continue the sentence as is*/
+    .content_part
+    {
+        flex: 40%;
+        background-color: #f07b7b;
 
-    /* For better explaination about nowrap: 
-    https://www.w3schools.com/cssref/playdemo.php?filename=playcss_white-space&preval=nowrap */
-    font-size: 6em;
+        h1
+        {
+            padding: 20px;
+            line-height: 60px;
+            font-size: 4em;
+            color: #fff;
+            a
+            {
+                color: #fff;
+            }
+        }
+
+        img
+        {
+            width: 100%;
+            height: 70vh;
+        }
+    }
 }
 
-#text_content
+.products_part
 {
-    
-    position: fixed; 
-    top: 40%;
-    left: 10%;
-    filter: opacity(0%);
-    white-space: nowrap;    /*Defines how white-space is treated inside an elements*/
-    /*nowrap will not break the sentence (or wrap around) into another line
-    but rather continue the sentence as is*/
-
-    /* For better explaination about nowrap: 
-    https://www.w3schools.com/cssref/playdemo.php?filename=playcss_white-space&preval=nowrap */
-
+    position: static;
+    height: 80vh;
+    z-index: 1;
     display: flex;
-    width: 100%;
-    
-    ul
-    {
-        list-style: none;
-        font-size: 2em;
 
-        ol 
+
+    .content_part
+    {
+        flex: 20%;
+        flex-wrap: wrap;
+        background: #f0d87b;
+        padding: 30px;
+        h1
         {
-            list-style: none;
-            font-size: 0.5em;
+            line-height: 70px;
+            font-size: 5em;
+            
         }
+
+        p
+        {
+            font-size: 1.5em;
+        }
+    }
+
+    .image_part
+    {
+        flex: 70%;
+        background: #0b0901;
+        width: 100%;
+
+
+        h2
+        {
+            color: #fff;
+            padding: 30px;
+            font-size: 3.5em;
+            
+            
+        }
+
+        .pic_space
+        {
+            
+            display: flex;
+            justify-content: center;
+
+            img
+            {
+                padding: 20px;
+                width: 50vh;
+
+            }
+        }
+
+        .text_space
+        {
+            display: flex;
+            justify-content: center;
+            
+            h3
+            {
+                font-size: 1.4em;
+                flex: 50%;
+                margin: 0 16%;
+                color: #fff;
+                flex: 50%;
+                display: flex;
+                justify-content: baseline;
+            }
+        }
+
+    }
+}
+
+.satisfied_customers
+{   
+    z-index: 1;
+    height: 70vh;
+    
+    .customer
+    {
+        
+        height: 35vh;
+        display: flex;
+        padding: 30px;
+        background-color: rgb(247, 242, 242);
+        p
+        {
+            flex: 90%;
+            font-size: 1.5em;
+            padding-left: 20px;
+        }
+        img
+        {
+            flex: 10%;
+            height: 200px;
+            
+            border-radius: 50%;
+        }
+        
     }
 }
 
@@ -159,9 +359,9 @@ body
         bottom: 0;      /*position relative to the bottom*/
         background-color: #171717; 
         width: 100%;
-        height: 250px;
+        height: 260px;
         display: flex;      /*defines the footer section as a box*/
-      
+        padding: 5px;
         
         
         

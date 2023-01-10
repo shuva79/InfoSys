@@ -10,8 +10,6 @@
 body {
   background-color: #c7c7c7;
   width: 100%;
-  min-height: 300vh; /*vh means viewport height*/
-  /*height so that we can scroll down the screen*/
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -23,7 +21,7 @@ body {
   /*The top and left 0 means it'll stay at the top left corner*/
   /*The navigation bar will take 100% of the width of the browser*/
   /*The values in padding shows top padding is 30px and left and right padding is 100px*/
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -75,12 +73,15 @@ body {
   z-index: 0;
 }
 
-#bonsai {
-  position: fixed;
-  background: #fff;
-  padding: 10px;
-  top: 20%;
-  left: 10%;
+.main {
+  min-height: 200vh; /*vh means viewport height*/
+  /*height so that we can scroll down the screen*/
+}
+.main #bonsai {
+  position: sticky; /*makes sure that the text goes away after the div ends*/
+  padding-left: 250px;
+  padding-bottom: 30px;
+  top: 40%;
   filter: opacity(0%);
   white-space: nowrap; /*Defines how white-space is treated inside an elements*/
   /*nowrap will not break the sentence (or wrap around) into another line
@@ -90,26 +91,162 @@ body {
   font-size: 6em;
 }
 
-#text_content {
-  position: fixed;
-  top: 40%;
-  left: 10%;
-  filter: opacity(0%);
-  white-space: nowrap; /*Defines how white-space is treated inside an elements*/
-  /*nowrap will not break the sentence (or wrap around) into another line
-  but rather continue the sentence as is*/
-  /* For better explaination about nowrap: 
-  https://www.w3schools.com/cssref/playdemo.php?filename=playcss_white-space&preval=nowrap */
+.home_part {
+  min-height: 75vh;
+  position: static;
   display: flex;
+  z-index: 1;
+}
+.home_part .content_part {
+  flex: 30%;
+  flex-wrap: wrap;
+  background: #7BF07B;
+  padding: 20px;
+}
+.home_part .content_part h2 {
+  position: relative;
+  top: 20%;
+  color: #4949b4;
+  font-size: 5em;
+}
+.home_part .content_part p {
+  position: relative;
+  top: 20%;
+  color: #1c1787;
+  font-size: 1.8em;
+  font-weight: 300;
+}
+.home_part .content_part h1 {
+  position: relative;
+  top: 20%;
+  font-size: 3em;
+  color: #060344;
+}
+.home_part .image_part {
+  flex: 60%;
+}
+.home_part .image_part img {
+  height: 100%;
   width: 100%;
 }
-#text_content ul {
-  list-style: none;
+
+.in_between {
+  height: 150px;
+  font-size: 5em;
+  padding: 20px;
+  z-index: 1;
+  font-weight: 550;
+  color: #022831;
+  background-color: #7bd9f0;
+}
+
+.blog_part {
+  position: static;
+  height: 90vh;
+  z-index: 1;
+  display: flex;
+}
+.blog_part .image_part {
+  background: #7b7bf0;
+  flex: 60%;
+}
+.blog_part .image_part img {
+  height: 75vh;
+  width: 100%;
+}
+.blog_part .image_part h3 {
+  padding: 20px;
+  color: #fff;
   font-size: 2em;
 }
-#text_content ul ol {
-  list-style: none;
-  font-size: 0.5em;
+.blog_part .content_part {
+  flex: 40%;
+  background-color: #f07b7b;
+}
+.blog_part .content_part h1 {
+  padding: 20px;
+  line-height: 60px;
+  font-size: 4em;
+  color: #fff;
+}
+.blog_part .content_part h1 a {
+  color: #fff;
+}
+.blog_part .content_part img {
+  width: 100%;
+  height: 70vh;
+}
+
+.products_part {
+  position: static;
+  height: 80vh;
+  z-index: 1;
+  display: flex;
+}
+.products_part .content_part {
+  flex: 20%;
+  flex-wrap: wrap;
+  background: #f0d87b;
+  padding: 30px;
+}
+.products_part .content_part h1 {
+  line-height: 70px;
+  font-size: 5em;
+}
+.products_part .content_part p {
+  font-size: 1.5em;
+}
+.products_part .image_part {
+  flex: 70%;
+  background: #0b0901;
+  width: 100%;
+}
+.products_part .image_part h2 {
+  color: #fff;
+  padding: 30px;
+  font-size: 3.5em;
+}
+.products_part .image_part .pic_space {
+  display: flex;
+  justify-content: center;
+}
+.products_part .image_part .pic_space img {
+  padding: 20px;
+  width: 50vh;
+}
+.products_part .image_part .text_space {
+  display: flex;
+  justify-content: center;
+}
+.products_part .image_part .text_space h3 {
+  font-size: 1.4em;
+  flex: 50%;
+  margin: 0 16%;
+  color: #fff;
+  flex: 50%;
+  display: flex;
+  justify-content: baseline;
+}
+
+.satisfied_customers {
+  z-index: 1;
+  height: 70vh;
+}
+.satisfied_customers .customer {
+  height: 35vh;
+  display: flex;
+  padding: 30px;
+  background-color: rgb(247, 242, 242);
+}
+.satisfied_customers .customer p {
+  flex: 90%;
+  font-size: 1.5em;
+  padding-left: 20px;
+}
+.satisfied_customers .customer img {
+  flex: 10%;
+  height: 200px;
+  border-radius: 50%;
 }
 
 .footer {
@@ -120,8 +257,9 @@ body {
   bottom: 0; /*position relative to the bottom*/
   background-color: #171717;
   width: 100%;
-  height: 250px;
+  height: 260px;
   display: flex; /*defines the footer section as a box*/
+  padding: 5px;
 }
 .footer footer #footer_map {
   flex: 30%;

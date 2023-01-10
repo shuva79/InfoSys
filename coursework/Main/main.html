@@ -11,67 +11,111 @@
     <link rel="stylesheet" href="main.css"> <!--Links to the css element-->
 </head>
 <body style="margin: 0;">
-    <div class="main">
     <header>
         <div class="container">
-                    <a href="main.html" id="logo"><img src="logo.png" alt="Bonsai" width="50px"></a> <!--Put logo here-->
-                                            <!--Links to other pages-->
-                    <ul >  
-                        <li><a href="../Main/main.html" class="links home">Home</a></li>                <!--Home Page-->
+            <a href="main.html" id="logo"><img src="logo.png" alt="Bonsai" width="50px"></a> <!--Put logo here-->
+            <!--Links to other pages-->
+            <ul >  
+                <li><a href="../Main/main.html" class="links home">Home</a></li>                <!--Home Page-->
+                
+                <li><a href="../Blog/blog.html" class="links">Blog</a></li>                <!--Blog Page-->
+                
+                <li><a href="../Store/store.html" class="links">Products</a></li>            <!--Store Page-->
                         
-                        <li><a href="../Blog/blog.html" class="links">Blog</a></li>                <!--Blog Page-->
-                        
-                        <li><a href="../Store/store.html" class="links">Products</a></li>            <!--Store Page-->
-                        
-                        <li><a href="../Research/research.html" class="links">Research</a></li>        <!--Research Page-->
-                        
-                        <li><a href="../About/about.html" class="links">About Us</a></li>           <!--About US Page-->
-                    </ul>
-        </div>
-    </header>
-    <img src="bonsai.jpg" alt="bonsai" id="bonsai_pic">
+                <li><a href="../Research/research.html" class="links">Research</a></li>        <!--Research Page-->
+                    
+                <li><a href="../About/about.html" class="links">About Us</a></li>           <!--About US Page-->
+             </ul>   
+       </div>
+      </header>
+            
+            
+<div class="main">
+        <img src="bonsai.jpg" alt="bonsai" id="bonsai_pic">
 
-    <script>
-        this.window.addEventListener('scroll', function() //this refers to the objects, window in this case
-        {
-            var scrollTop = window.pageYOffset;
-            //pageYOffset returns the num of pixels the document has been scrolled vertically
-            var image = document.getElementById('bonsai_pic');
-            //getElementById searches for an ID named 'bonsai_pic'
-            image.style.filter = 'blur(' + scrollTop / 150 + 'px)';
-            // .style.filter adds visual effects like blur into images
-            // Here, it takes blur(value) and in place of the value, we have kept a variable which changes value dynamically
-        });
-    </script>
-    
-    <h1 id="bonsai">Bonsai</h1>
+        <script>
+            this.window.addEventListener('scroll', function() //this refers to the objects, window in this case
+            {
+                var scrollTop = window.pageYOffset;
+                //pageYOffset returns the num of pixels the document has been scrolled vertically
+                var image = document.getElementById('bonsai_pic');
+                //getElementById searches for an ID named 'bonsai_pic'
+                image.style.filter = 'blur(' + scrollTop / 150 + 'px)';
+                // .style.filter adds visual effects like blur into images
+                // Here, it takes blur(value) and in place of the value, we have kept a variable which changes value dynamically
+            });
+        </script>
+        
+        <h1 id="bonsai">Bonsai</h1>
 </div>
 
-    <div id="text_content" >
-        <ul>
-            <div id="upper_content">
-                <li>
-                    Home Page: 
-                    <ol>
-                        <li>
-                            Starting page of the website.
-                        </li>
-                    </ol>
-                </li><br>
-
-                <li>Blog: <ol><li>Talks about the impact and significance of Information Systems in our daily lives.</li></ol></li><br>
-
-                <li>Products: <ol><li>A detailed catalogue of the products available in our website.</li></ol></li><br>
-            </div>
-
-            <div id="lower_content">
-                <li>Research: <ol><li>Explores the tools and techniquies used in the creation of this website.</li></ol></li><br>
-            
-                <li>About Us: <ol><li>A brief insight into the team who made this website possible.</li></ol></li>
-            </div>
-        </ul>
-
+<div class="home_part">
+    <div class="content_part">
+        <h2>An experience like never before.</h2>
+        
     </div>
+
+    <div class="image_part">
+        <img src="https://i.pinimg.com/564x/d0/2f/7e/d02f7e146f4f0bcf7668338d6e927a4e.jpg" alt="">
+    </div>
+    
+    <div class="content_part">
+        <h1>A one stop shop for all things Bonsai.</h1>
+        <p>
+             <br><br>
+            Whether you're starting out or settling in, we provide the best (mini) trees for the best price.
+        </p>
+    </div>
+</div>
+
+<div class="in_between">Staying Connected</div>
+
+<div class="blog_part">
+    <div class="image_part">
+        <img src="https://assets.materialup.com/uploads/bb7a71f1-d057-46e4-82c4-163f3b3d2033/preview.png" alt="blog pic">
+        <h3>Get the lastest updates on technology to stay tech savvy from our parent company</h3>
+    </div>
+
+    <div class="content_part">
+        <h1>Fall <br> in love <br> with our <a href="../Store/store.html"> articles! </a></h1>
+        <img src="https://miro.medium.com/max/1400/0*S3TdulHkiJTugR7d.gif" alt="">
+       
+    </div>
+</div>
+
+<div class="in_between">Catalogue</div>
+<div class="products_part">
+    <div class="content_part">
+        <h1>Your <i style="color:#a97bf0">need</i>  is in your <i style="color:rgb(90, 159, 219)">feed</i></h1>
+        <br>
+        <p>Products are refreshed and updated every week catered to your personal preference</p>
+    </div>
+
+    <div class="image_part">
+        <h2>Your weekly recommendation</h2>
+        <div class="pic_space">       <!--This is for spacing the two pictures-->
+                <img src="https://media.discordapp.net/attachments/1055026755418722380/1062005159753945248/14_0319_studio-028.png?width=551&height=551" alt="">
+                <img src="https://media.discordapp.net/attachments/1055026755418722380/1062005302498701393/14_0319_studio-594-2.png?width=551&height=551" alt="">
+        </div>
+
+        <div class="text_space"> <!--This is for writing names below the two pictures-->
+            <h3>Japanese Apricot</h3>
+            <h3>Vine Maple</h3>
+        </div>
+    </div>
+</div>
+
+<div class="satisfied_customers">
+    <div class="customer" id="Jeff">
+        <p>"Apricot has been my go to store for all my bonsai and gardening needs. The prompt delivery and a friendly support team puts the competiton to shame."<br><br> -Jeff, a proud customer since 1999</p>
+        <img src="https://calisphere.org/clip/500x500/7c3c38d25d47d0bc062183cbf929ac0d" alt=""> 
+    </div>
+    <hr>
+    <div class="customer" id="Shrek">
+        <img src="https://images.thestar.com/-UsUIfPP-DDGBBpXjO3twxkSEjs=/1200x1200/smart/filters:cb(1548689313694):format(webp)/https://www.thestar.com/content/dam/thestar/entertainment/television/analysis/2019/01/25/is-this-the-breakout-year-for-asian-men-in-leading-roles/simu_liu.jpg" alt="">
+        <p>"Having started a Bonsai garden recently was an overwhelming task for me. But with Apricot, I was able to get all the help I needed to start my journey. " <br><br>-Simu Liu</p>
+    </div>
+</div>
 
     <script src="main.js"></script>
     <div class="footer">
@@ -99,7 +143,7 @@
                 </div>
                 
                 <div id="socials">
-                    <p class="footer_text">👥  Follow us:</p>
+                    
                     <br>
                     <img src="https://cdn.freebiesupply.com/images/large/2x/instagram-icon-white-on-black.png" alt="Instagram" height="50px"> 
                     <img src="https://cdn.freebiesupply.com/logos/large/2x/pinterest-1-logo-black-and-white.png" alt="Pintrest" height="50px">
