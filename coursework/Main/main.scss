@@ -6,18 +6,19 @@
     /*For eg, if our content takes more space including the padding, the browser allows it*/
     /*written a bit in detail in my MST wala notebook, ask me if you dont understand*/
 
-    font-family: "Poppins", sans-serif;
+    
 }
 
 body
 {
-    background-color: #c7c7c7;
+    background-color: #ecdfc5;
     width: 100%;
     
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
@@ -33,8 +34,9 @@ body
     left: 0;
     width: 100%;
     padding: 30px 100px;
-    height: 100px;
-    
+    height: 120px;
+    background-color: #647b5a;
+    z-index: 2;
     
     
     /*Wraps texts acc to screen size*/
@@ -109,10 +111,12 @@ body
         #bonsai
         {
             position: sticky;   /*makes sure that the text goes away after the div ends*/
-            
-            padding-left: 250px;
+            font-family: Broadway;
+            color: #3a523f;
+            padding-left: 15px;
             padding-bottom: 30px;
             top: 40%;
+            
             
             filter: opacity(0%);
             white-space: nowrap;    /*Defines how white-space is treated inside an elements*/
@@ -128,52 +132,75 @@ body
 
 .home_part
 {
-    min-height: 75vh;
+    min-height: 700px;
     position: static;
     display: flex;
     z-index: 1;
+    background: #647b5a;
 
+    #left
+        {
+            background: #647b5a;
+        }
+
+        #right
+        {
+            background: #3a523f;
+            word-spacing: 1px;
+        }
     .content_part
     {  
         
         flex: 30%;
         flex-wrap: wrap; 
-        background: #7BF07B;
+        
         padding: 20px;
+
         
         h2
         {
             position: relative;
             top: 20%;
-            color: #4949b4;
+            color: #ecdfc5;
+            /*color: #4949b4;*/
             font-size: 5em;
+            font-family: Broadway;
         }
 
         p
         {
             position: relative;
             top: 20%;
-            color: #1c1787;
+            /*color: #1c1787;*/
+            color: #dec29b;
             font-size: 1.8em;
             font-weight: 300;
+            font-family:'Segoe UI';
         }
 
         h1
         {
             position: relative;
             top: 20%;
-            font-size: 3em;
-            color: #060344;
+            font-size: 2.5em;
+            font-weight: 400;
+            font-style: italic;
+
+            color: #dec29b;
+            /*color: #060344;*/
+
         }
    }
 
    .image_part
    {
-        flex: 60%;
+        flex: 70%;
         img
         {
+            overflow-x: visible;
             height: 100%;
             width: 100%;
+            margin-right: 0;
         }
    }
 }
@@ -185,8 +212,16 @@ body
     padding: 20px;
     z-index: 1;
     font-weight: 550;
-    color: #022831;
-    background-color: #7bd9f0;
+    font-family: Broadway;
+    // color: #022831;
+    color: #3a523f;
+    background-color: #ecdfc5;
+
+}
+#connected
+{
+    background: #000;
+    color: #dec29b;
 }
 
 .blog_part
@@ -195,7 +230,7 @@ body
     height: 90vh;
     z-index: 1;
     display: flex;
-
+    
     .image_part
     {
         background: #7b7bf0;
@@ -212,7 +247,7 @@ body
             padding: 20px;
             color: #fff;
             font-size: 2em;
-
+            font-family: 'Segoe UI';
            
         }
 
@@ -221,17 +256,19 @@ body
     .content_part
     {
         flex: 40%;
-        background-color: #f07b7b;
+        background-color: #3A523F;
 
         h1
         {
             padding: 20px;
-            line-height: 60px;
-            font-size: 4em;
-            color: #fff;
+            font-size: 2.5em;
+            font-weight: 400;
+            color: #ecdfc5;
+            font-family: 'Segoe UI';
             a
             {
-                color: #fff;
+                font-family: 'Segoe UI';
+                color: #ecdfc5;
             }
         }
 
@@ -250,17 +287,17 @@ body
     z-index: 1;
     display: flex;
 
-
     .content_part
     {
         flex: 20%;
         flex-wrap: wrap;
-        background: #f0d87b;
+        background: #3a523f;
         padding: 30px;
         h1
         {
             line-height: 70px;
             font-size: 5em;
+            color: #fff;
             
         }
 
@@ -349,6 +386,87 @@ body
     }
 }
 
+.research_part
+{
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+
+    div
+    {
+        position: relative;
+        flex: 50%;
+        background: #3A523F;
+    }
+
+    .image_part
+    {
+        background: url(https://i.pinimg.com/564x/c9/9e/95/c99e951f80fccdd0f644ec01af9a3f7e.jpg);      
+         /*placing the image directly here instead of using img tag because we're using the image as background cover and its easier this way*/
+        background-size: cover;                     
+     
+        /*This gives the hollowed out look when the text appears*/
+        h2
+        {
+            -webkit-text-stroke: 2px;
+            -webkit-text-stroke-color: #fff;
+            color: transparent;
+            left: 100%;
+        }
+    }
+
+    /*this is responsible for the sliding animation*/
+    h2
+    {
+        position: absolute;
+        white-space: nowrap;
+        font-size: 12em;
+        line-height: 25vh;
+        animation: animate 30s linear infinite;
+        color: #fff;
+
+    }
+
+    /*@keyframes rule specifies the animation code, animate in h2 in this case*/
+    @keyframes animate  
+    {
+        0%
+        {
+            transform: translateX(0);
+        }
+
+        100%
+        {
+            transform: translateX(-100%);
+        }
+    }
+
+    /*Learn more about @ here: https://stackoverflow.com/questions/3453257/what-is-the-purpose-of-the-symbol-in-css*/
+    /*About keyframes https://www.w3schools.com/cssref/css3_pr_animation-keyframes.php#:~:text=Definition%20and%20Usage,of%20CSS%20styles%20many%20times.*/
+
+    .content_part
+    {
+        font-size: 2.5em;
+        padding: 20px;
+
+        p,a
+        {
+            margin-top: 20%;
+            color: #fff;
+        }
+
+        a
+        {
+            text-decoration: none;
+            padding: 5px;
+            background-color: #000000;
+            border-radius: 10px;
+        }
+    }
+}
+
 .footer
 {
     z-index: 2;     /*this overlaps over the image*/
@@ -359,7 +477,7 @@ body
         bottom: 0;      /*position relative to the bottom*/
         background-color: #171717; 
         width: 100%;
-        height: 260px;
+        height: 300px;
         display: flex;      /*defines the footer section as a box*/
         padding: 5px;
         

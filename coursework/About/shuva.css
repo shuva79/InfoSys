@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box; /*tells the browser to account for any border and padding in the values you specify*/
+    /*For eg, if our content takes more space including the padding, the browser allows it*/
+    /*written a bit in detail in my MST wala notebook, ask me if you dont understand*/
+  }
+
+body {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    list-style: none;
+    background-color: #ecdfc5;    
+    margin: 0;
+}
+
+.container {
+    /*Absolute means its position value is fixed*/
+    /*Sticky means Relative(when normal) and Fixed (when scrolled) and the top,right,bottom, left values are active*/
+    /*The top and left 0 means it'll stay at the top left corner*/
+    /*The navigation bar will take 100% of the width of the browser*/
+    /*The values in padding shows top padding is 30px and left and right padding is 100px*/
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    height: 120px;
+    background-color: #647b5a;
+    z-index: 2;
+    /*Wraps texts acc to screen size*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*justify content defines how the browser distributes space between and around content items*/
+    /*space-between ensures items will have space between them*/
+    align-items: center;
+  }
+  .container #logo {
+    color: #000000;
+    font-weight: 700; /*thiccness of characters*/
+    font-size: 2em; /*1em = 2 inches or 16 pixels*/
+    /*em stands for emphemeral unit*/
+    /*em is favourable than px or cm because it is relative to parent's font size*/
+    text-transform: uppercase; /*controls text case*/
+    text-decoration: none;
+  }
+  .container ul {
+    display: flex;
+    justify-content: center; /*Aligns the list items in the center of container*/
+    /*They were positioned on the top right before this*/
+    list-style: none; /*Removes the bullet thingy from list*/
+  }
+  .container ul li {
+    margin-left: 20px;
+  }
+  .container ul li .links {
+    color: black;
+    padding: 6px 15px;
+    /*Removes the underling thingy from links*/
+    text-decoration: none;
+  }
+  .container ul li a:hover, .container ul li .about{
+    background-color: #fff;
+    border-radius: 15px;
+  }
+
+.portfolio_main
+{
+    background: #fff;
+    width: 50%;
+    padding: 20px;
+    position: static;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+body ul
+{
+    list-style: none;
+}
+
+.info
+{
+    display: flex;
+    justify-content: center;
+}
+
+.info ul li
+{
+    font-size: 1.2em;
+    font-weight: 0;
+    display: flex;
+    line-height: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.footer {
+    z-index: 2; /*this overlaps over the image*/
+  }
+  .footer footer {
+    position: static; /*this helps the footer to stay at the bottom*/
+    bottom: 0; /*position relative to the bottom*/
+    background-color: #171717;
+    width: 100%;
+    line-height: 10px;
+    display: flex; /*defines the footer section as a box*/
+    padding: 5px;
+  }
+  .footer footer #footer_map {
+    flex: 30%;
+    padding-left: 10px;
+    padding-top: 5px;
+  }
+  .footer footer #footer_map iframe {
+    width: 400px;
+  }
+  .footer footer #footer2, .footer footer #footer3 {
+    padding-left: 10px;
+    padding-top: 15px;
+  }
+  .footer footer #footer2 {
+    flex: 45%; /*divides the footer box to 45% for the middle box*/
+    display: flex; /*We make the footer2 div a box again so that we can divide two boxes,
+  contact and socials in an equally spaced manner*/
+  }
+  .footer footer #footer2 #contact, .footer footer #footer2 #socials {
+    flex: 50%; /*equally divides footer2 into 2 halves*/
+  }
+  .footer footer #footer2 #socials img {
+    padding: 5px;
+  }
+  .footer footer #footer3 {
+    flex: 25%;
+  }
+  .footer footer .footer_text {
+    color: #ecbe1a;
+    font-weight: 500; /*boldness of text*/
+  }
+  .footer footer .footer_text_info {
+    color: #cecece;
+  }
+  .footer footer ul {
+    list-style: none; /*removes the listing dot thingy*/
+    line-height: 30px; /*vertical spacing between lines*/
+  }
+  .footer footer ul a {
+    text-decoration: none; /*removes underlined thingy from link*/
+    color: #cecece;
+  }
+  
+  

@@ -5,11 +5,11 @@
   box-sizing: border-box; /*tells the browser to account for any border and padding in the values you specify*/
   /*For eg, if our content takes more space including the padding, the browser allows it*/
   /*written a bit in detail in my MST wala notebook, ask me if you dont understand*/
-  font-family: "Poppins", sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background-color: #c7c7c7;
+  background-color: #ecdfc5;
   width: 100%;
   overflow-y: hidden;
 }
@@ -91,14 +91,17 @@ body {
   background-color: #1d1d1d;
 }
 .container .scroll-container #text {
-  color: #383838;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ecdfc5;
+  font-family: broadway;
   font-weight: 700;
   font-size: 10em;
   width: 100%;
   text-align: center;
   outline: none;
-  text-shadow: 1px 1px 0 #fff; /*height_shadow     vertical_shadow     blur-radius     colour */
-  background-color: aqua;
+  background-color: #647b5a;
 }
 
 .card {
@@ -344,6 +347,63 @@ body {
   padding: 0.5em;
   display: inline-block; /* the padding takes effect by using this*/
   font-weight: 200;
+}
+
+#footer_scroll {
+  height: 50vh;
+}
+#footer_scroll .footer {
+  z-index: 2; /*this overlaps over the image*/
+}
+#footer_scroll .footer footer {
+  position: static; /*this helps the footer to stay at the bottom*/
+  bottom: 0; /*position relative to the bottom*/
+  background-color: #171717;
+  width: 100%;
+  height: 40vh;
+  display: flex; /*defines the footer section as a box*/
+  padding: 5px;
+}
+#footer_scroll .footer footer #footer_map {
+  flex: 30%;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+#footer_scroll .footer footer #footer_map iframe {
+  width: 400px;
+}
+#footer_scroll .footer footer #footer2, #footer_scroll .footer footer #footer3 {
+  padding-left: 10px;
+  padding-top: 15px;
+}
+#footer_scroll .footer footer #footer2 {
+  flex: 45%; /*divides the footer box to 45% for the middle box*/
+  display: flex; /*We make the footer2 div a box again so that we can divide two boxes,
+contact and socials in an equally spaced manner*/
+}
+#footer_scroll .footer footer #footer2 #contact, #footer_scroll .footer footer #footer2 #socials {
+  flex: 50%; /*equally divides footer2 into 2 halves*/
+}
+#footer_scroll .footer footer #footer2 #socials img {
+  padding: 5px;
+}
+#footer_scroll .footer footer #footer3 {
+  flex: 25%;
+}
+#footer_scroll .footer footer .footer_text {
+  color: #ecbe1a;
+  font-weight: 500; /*boldness of text*/
+}
+#footer_scroll .footer footer .footer_text_info {
+  color: #cecece;
+}
+#footer_scroll .footer footer ul {
+  list-style: none; /*removes the listing dot thingy*/
+  line-height: 30px; /*vertical spacing between lines*/
+}
+#footer_scroll .footer footer ul a {
+  text-decoration: none; /*removes underlined thingy from link*/
+  color: #cecece;
 }
 
 /*# sourceMappingURL=about.css.map */

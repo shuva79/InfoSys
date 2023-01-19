@@ -5,6 +5,5 @@ this.window.addEventListener("scroll", function(){
     let totalHeight = window.innerHeight;   //inner height means the actual height of the actual webpage
     
     h1.style.filter = 'opacity(' + (1 - ((totalHeight-scrollTop)/totalHeight)) * 100 + '%)'; //opacity reduces on scrolling
-  
 });
 

@@ -9,7 +9,21 @@
     <title>Bonsai</title>
 
     <link rel="stylesheet" href="main.css"> <!--Links to the css element-->
+
+    <style>
+        body
+        {
+            background-color: #ecdfc5;
+            width: 100%;
+            
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    </style>
 </head>
+
 <body style="margin: 0;">
     <header>
         <div class="container">
@@ -25,13 +39,15 @@
                 <li><a href="../Research/research.html" class="links">Research</a></li>        <!--Research Page-->
                     
                 <li><a href="../About/about.html" class="links">About Us</a></li>           <!--About US Page-->
+
+                <li><a href="../About/about.html" class="links">Sign Up</a></li>           <!--Sign up Page-->
              </ul>   
        </div>
       </header>
             
             
 <div class="main">
-        <img src="bonsai.jpg" alt="bonsai" id="bonsai_pic">
+        <img src="bonsai1.jpg" alt="bonsai" id="bonsai_pic">
 
         <script>
             this.window.addEventListener('scroll', function() //this refers to the objects, window in this case
@@ -46,20 +62,20 @@
             });
         </script>
         
-        <h1 id="bonsai">Bonsai</h1>
+        <h1 id="bonsai">bonsai</h1>
 </div>
 
-<div class="home_part">
+<div class="home_part" id="left">
     <div class="content_part">
-        <h2>An experience like never before.</h2>
+        <h2>experience like never before.</h2>
         
     </div>
 
     <div class="image_part">
-        <img src="https://i.pinimg.com/564x/d0/2f/7e/d02f7e146f4f0bcf7668338d6e927a4e.jpg" alt="">
+        <img src="home_bonsai.png" alt="">
     </div>
     
-    <div class="content_part">
+    <div class="content_part" id="right">
         <h1>A one stop shop for all things Bonsai.</h1>
         <p>
              <br><br>
@@ -68,25 +84,25 @@
     </div>
 </div>
 
-<div class="in_between">Staying Connected</div>
+<div class="in_between" id="connected">Staying Connected</div>
 
 <div class="blog_part">
     <div class="image_part">
-        <img src="https://assets.materialup.com/uploads/bb7a71f1-d057-46e4-82c4-163f3b3d2033/preview.png" alt="blog pic">
-        <h3>Get the lastest updates on technology to stay tech savvy from our parent company</h3>
+        <img src="blog.png" alt="blog pic">
+        <h3>Get the latest updates on technology to stay tech savvy from our parent company</h3>
     </div>
 
     <div class="content_part">
-        <h1>Fall <br> in love <br> with our <a href="../Store/store.html"> articles! </a></h1>
-        <img src="https://miro.medium.com/max/1400/0*S3TdulHkiJTugR7d.gif" alt="">
+        <h1>Fall in love with our <a href="../Store/store.html"> articles! </a></h1>
+        <img src="hmm.jpg" alt="">
        
     </div>
 </div>
 
-<div class="in_between">Catalogue</div>
+<div class="in_between" id="catalogue">Catalogue</div>
 <div class="products_part">
     <div class="content_part">
-        <h1>Your <i style="color:#a97bf0">need</i>  is in your <i style="color:rgb(90, 159, 219)">feed</i></h1>
+        <h1>Your <i style="color:#ecdfc5">need</i>  is in your <i style="color:#ecdfc5">feed</i></h1>
         <br>
         <p>Products are refreshed and updated every week catered to your personal preference</p>
     </div>
@@ -114,6 +130,19 @@
     <div class="customer" id="Shrek">
         <img src="https://images.thestar.com/-UsUIfPP-DDGBBpXjO3twxkSEjs=/1200x1200/smart/filters:cb(1548689313694):format(webp)/https://www.thestar.com/content/dam/thestar/entertainment/television/analysis/2019/01/25/is-this-the-breakout-year-for-asian-men-in-leading-roles/simu_liu.jpg" alt="">
         <p>"Having started a Bonsai garden recently was an overwhelming task for me. But with Apricot, I was able to get all the help I needed to start my journey. " <br><br>-Simu Liu</p>
+    </div>
+</div>
+
+<div class="research_part">
+    <div class="image_part">
+        <h2>Research</h2>
+        <!--Image background is set in css-->
+    </div>
+
+    <div class="content_part">
+        <p>At apricot, we believe in giving. The research section is dedicated for curious minds who want to make change to the world and make it a better place.</p>
+        <br><br>
+        <p>Check out the <a href="../Research/research.html">Research</a> page to learn more.</p>
     </div>
 </div>
 
