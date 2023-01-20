@@ -1,0 +1,74 @@
+/* Cart */
+#cart-container table{
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+#cart-container table thead{
+    font-weight: 700;
+}
+#cart-container table thead td{
+    background:#6666;
+    color:black;
+    border:none;
+    padding: 6px 0;
+}
+#cart-container table td{
+    border: 1px solid #b6b3b3;
+    text-align: center;
+}
+#cart-container table td:nth-child(1){
+    width: 150px;
+}
+#cart-container table td:nth-child(2)
+#cart-container table td:nth-child(3){
+    width: 100px;
+
+}
+#cart-container table td:nth-child(4)
+#cart-container table td:nth-child(5){
+  width: 100px;
+}
+#cart-container table tbody img{
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+}
+td input{
+width:35px ;
+height: 20px;
+padding: 5px;
+}
+  /* Customer query and order summary*/ 
+.Note{
+    border: 1px solid #b6b3b3;
+}
+.Total{
+    border: 1px solid #b6b3b3;
+}
+#Customer{
+    justify-content: flex;
+
+}
+.buttons{
+    display:flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.buttons a{
+    flex:2 2 16px;
+    padding: 10px;
+    font-size: 15px;
+    color:honeydew;
+    border: 1px solid #444;
+    background-color:#2183a2;
+}
+
+.Customer
+{
+    display: flex;
+}
+
+.Customer .Note, .Customer  .Total
+{
+    flex: 50%;
+}

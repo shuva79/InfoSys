@@ -1,0 +1,222 @@
+*{
+    padding:0;
+    margin: 0;
+}
+
+
+.container1 {
+    /*Absolute means its position value is fixed*/
+    /*Sticky means Relative(when normal) and Fixed (when scrolled) and the top,right,bottom, left values are active*/
+    /*The top and left 0 means it'll stay at the top left corner*/
+    /*The navigation bar will take 100% of the width of the browser*/
+    /*The values in padding shows top padding is 30px and left and right padding is 100px*/
+    position: static;
+    top: 0;
+    left: 0;
+    width: 90.1%;
+    padding: 30px 100px;
+    height: 120px;
+    background-color: #647b5a;
+    z-index: 2;
+    /*Wraps texts acc to screen size*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*justify content defines how the browser distributes space between and around content items*/
+    /*space-between ensures items will have space between them*/
+    align-items: center;
+  }
+  .container1 #logo {
+    color: #000000;
+    font-weight: 700; /*thiccness of characters*/
+    font-size: 2em; /*1em = 2 inches or 16 pixels*/
+    /*em stands for emphemeral unit*/
+    /*em is favourable than px or cm because it is relative to parent's font size*/
+    text-transform: uppercase; /*controls text case*/
+    text-decoration: none;
+  }
+  .container1 ul {
+    display: flex;
+    justify-content: center; /*Aligns the list items in the center of container*/
+    /*They were positioned on the top right before this*/
+    list-style: none; /*Removes the bullet thingy from list*/
+  }
+  .container1 ul li {
+    margin-left: 20px;
+  }
+  .container1 ul li .links {
+    color: black;
+    padding: 6px 15px;
+    /*Removes the underling thingy from links*/
+    text-decoration: none;
+  }
+  .container1 ul li a:hover, .container1 ul li .products {
+    background-color: #fff;
+    border-radius: 15px;
+  }
+  
+
+body{
+    background-color:#c7c7c7;
+    align-items:fixed;  
+    overflow-x: hidden;     /*hides the horizontal scrollbar*/
+}
+
+main
+{
+    display: flex;          /*this helps us to section off the body part of the doc*/
+    justify-content: center;    /*aligns all the content at the center, horizontally speaking*/
+}
+
+.Collection{
+    text-align:center;
+    font-size: 30px;
+
+}
+.Collection span{
+    color:rgba(0, 0, 0, 0.67);
+    text-transform: uppercase;
+    display: block;
+    
+}
+.container{
+    position:static;
+    width: 1000px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap:wrap;
+    padding:50px;
+}
+.container .card{
+    position:relative;
+    width:260px;
+    height: 250px;
+    background:aliceblue;
+    margin: 30px 10px;
+    padding:20px 15px;
+    display:flex;
+    flex-direction:column;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition:0.3s ease-in-out;
+}
+.container .card:hover{
+height:300px;
+}
+.container .card .image{
+    position:relative;   
+    top: -60px;
+    left:30px;
+    z-index: 1;
+    box-shadow:0 5px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer; 
+}                      
+.container .card .image{
+    max-width: 100%;
+    border-radius: 5px;
+}
+.container .card .content{
+    position:relative;
+    margin-top:-140px;
+    padding:10px 15px;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition:0.3s ease-in-out
+}
+.container .card:hover .content{
+    visibility: visible;
+    opacity: 1; 
+    margin-top:-50px;
+    transition-delay: 0.3s;
+}
+.Store{
+    text-align:center;
+    font-size: 30px;
+
+}
+.Store span{
+    color:rgba(0, 0, 0, 0.67);
+    text-transform: uppercase;
+    display: block;
+}
+
+h3{
+    text-align: center;
+    cursor: pointer;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+p{
+    text-align: left;
+    
+}
+.buttons{
+    display:flex;
+    gap:10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.buttons a{
+    flex:2 2 16px;
+    padding: 10px;
+    font-size: 15px;
+    color:honeydew;
+    border: 1px solid #444;
+    background-color:#2183a2;
+}
+
+
+.footer {
+    z-index: 2; /*this overlaps over the image*/
+  }
+  .footer footer {
+    position: static; /*this helps the footer to stay at the bottom*/
+    bottom: 0; /*position relative to the bottom*/
+    background-color: #171717;
+    width: 100%;
+    height: 300px;
+    display: flex; /*defines the footer section as a box*/
+    padding: 5px;
+  }
+  .footer footer #footer_map {
+    flex: 30%;
+    padding-left: 10px;
+    padding-top: 5px;
+  }
+  .footer footer #footer_map iframe {
+    width: 400px;
+  }
+  .footer footer #footer2, .footer footer #footer3 {
+    padding-left: 10px;
+    padding-top: 15px;
+  }
+  .footer footer #footer2 {
+    flex: 45%; /*divides the footer box to 45% for the middle box*/
+    display: flex; /*We make the footer2 div a box again so that we can divide two boxes,
+  contact and socials in an equally spaced manner*/
+  }
+  .footer footer #footer2 #contact, .footer footer #footer2 #socials {
+    flex: 50%; /*equally divides footer2 into 2 halves*/
+  }
+  .footer footer #footer2 #socials img {
+    padding: 5px;
+  }
+  .footer footer #footer3 {
+    flex: 25%;
+  }
+  .footer footer .footer_text {
+    color: #ecbe1a;
+    font-weight: 500; /*boldness of text*/
+  }
+  .footer footer .footer_text_info {
+    color: #cecece;
+  }
+  .footer footer ul {
+    list-style: none; /*removes the listing dot thingy*/
+    line-height: 30px; /*vertical spacing between lines*/
+  }
+  .footer footer ul a {
+    text-decoration: none; /*removes underlined thingy from link*/
+    color: #cecece;
+  }

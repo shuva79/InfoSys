@@ -302,23 +302,49 @@ body {
   /*This gives the hollowed out look when the text appears*/
 }
 .research_part .image_part h2 {
-  -webkit-text-stroke: 2px;
-  -webkit-text-stroke-color: #fff;
-  color: transparent;
-  left: 100%;
+  -webkit-text-stroke: 2px; /*specifies width of stroke for each character*/
+  -webkit-text-stroke-color: #fff;  /*specifies colour of strokes for each text character*/
+  
+  /*webkit ensures compatibility among browsers and provides animations*/
+  
+  color: transparent; /*this gives out that hollowed out look*/
+  left: 100%; /*sets initial position to 100% of the left side
+  which causes the RESEARCH text to begin from the other area of div*/
 }
+
 .research_part h2 {
   position: absolute;
-  white-space: nowrap;
+  white-space: nowrap;  /*text won't be displayed in multiple lines if there is no space*/
   font-size: 12em;
   line-height: 25vh;
   animation: animate 30s linear infinite;
+  /* animate is just the name for the animation we are about to do, like a variable
+    30s means the time span over which this occurs
+    linear specifies an animation with the same speed from start to end 
+    infinite means it'll repeat infinitely 
+
+    For more info, https://www.w3schools.com/css/css3_animations.asp
+  */
   color: #fff;
 }
+
+
+/* When we specify CSS inside the @keyframes rule, the animation gratually changes from current 
+style to the new style
+
+for eg, from 0% to 100% in this case
+*/
+
 @keyframes animate {
+  /*initially, the X-axis value of the h2 tag is at 0, aka initial position*/
+  /* transform allows us to use methods in graphs we did in class 10, like enlargement, translate, etc*/
+
   0% {
     transform: translateX(0);
   }
+
+  /*it slowly transforms to 100% in which case, it's position is changed to -100% of initial position*/
+  /*this gives the animation effect of RESEARCH*/
   100% {
     transform: translateX(-100%);
   }

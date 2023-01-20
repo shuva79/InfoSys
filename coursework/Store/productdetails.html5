@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy now</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="details.js">
+</head>
+<body>
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
+                <div class="image">
+                    <img src="" alt="" height="500">
+                </div> 
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="card">
+                <div class="Desc of product">
+                      <h1></h1>
+                      <p>RS.</p>
+                     <hr/>
+                        <strong><!--strong tag is indicate the important note in the HTMl or it indicate us that the things we wrote is important-->
+                            
+                        </strong>
+                        <p>
+                            <span><!-- a generic inline container for phrasing content, which does not inherently represent anything .It is used to group elements for styling purpose-->
+                                <strong>Botanical Name:</strong>
+                            </span>
+                            <em></em><!--it is just like Italic but it emphasized text-->
+                        </p>
+                        <p>
+                            <span>
+                                <strong>Classification:</strong>
+                            </span>
+                            <em></em>
+                        </p>
+                        <p>
+                            <span>
+                                <strong>Foliage colour:</strong>
+                            </span>
+                            <em></em>
+                        </p>
+                        <p>
+                            <span>
+                                <strong>Origin:</strong>
+                            </span>
+                            <em></em>
+                        </p>
+                        <p>
+                            <span>
+                                <strong>Approx Age:</strong>
+                            </span>
+                            <em></em>
+                        </p>
+                        <p>
+                            <span>
+                                <strong>Size:</strong>
+                            </span>
+                            <em>cm H & cm W (with pot)</em>
+                        </p>
+                        <p>
+                            <span>
+                                <strong>Shopping info:</strong>
+                            </span>
+                            <em>Your Bonsai tree will arrive potted in the ceramic pot as seen in the photo.
+                             Each order is packaged securely to ensure safe delivery. We ship our trees worldwide.</em>
+                        </p>
+                        <div class="button-container">
+                            <button class="cart-qty-plus" type="button" value="+">+</button>
+                            <input type="text" name="qty" min="0" class="qty form-control" value="0">
+                            <button class="cart-qty-minus" type="button" value="-">-</button>
+                        </div>
+
+                        <div class="buttons">
+                            <a href="#" class="buy">Buy now</a>
+                        </div>
+                        
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping</title>
+    <link rel="stylesheet" href="store.css">
+</head>
+<body>
+    <h2><u>Shopping Cart</u></h2>
+    <hr/>
+    <section id="cart-container" class="container">
+        <table width="100%">
+            <thead><!--defines a header cell in an HTML table or it can be write as th-->
+                <tr><!--defines a row of cells in a table-->
+                    <td>Product</td><!--defines a cell of a table that contains data-->
+                    <td>Name</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Sub Totals</td>
+              </tr>
+             </thead>
+
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="https://www.fnp.com/images/pr/x/v20201014151003/buddhist-pine-podocarpus-bonsai-in-brown-ceramic-tray_1.jpg" alt="buddhist_pine podocarpus" height="200">
+                    </td>
+                    <td>Buddhist_pine</td>
+                    <td>Rs.500</td>
+                    <td><input type="Number" value="1"></td>
+                    <td>Rs.500</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+    <br>
+    
+    <div class="Customer">
+        <div class="Note">
+            <table>
+                <h2>Customer Query</h2>
+                <p>Apply your query if you have</p>
+                <input type="text" placeholder="Add your query or Order note">
+                <button>Apply</button>
+            </table>
+            
+        </div>
+        
+        
+        <br>
+        
+        <div class="Total">
+            <div>
+                <h1>Order Summary</h1>
+                <p>
+                    <span>
+                        <strong>Item Total:</strong>
+                    </span>
+                    <em>Rs.500</em>
+                </p>
+                <p>
+                    <span>
+                        <strong>Delivery Fee:</strong>
+                    </span>
+                    <em>Rs.100(All over Nepal)</em>
+                </p>
+                <p>
+                    <span>
+                        <strong>Total payment:</strong>
+                    </span>
+                    <em>Rs.600</em>
+                </p>
+                <p>
+                    <span>
+                        <strong>Total:</strong>
+                    </span>
+                    <em>Rs.600</em>
+                </p>
+                <p>
+                    <div class="buttons">
+                        <a href="#" class="buy">Place an Order</a>
+                    </div>
+                </p>
+            </div>
+
+        </div>  
+    </div>
+
+</body>
+</html>
