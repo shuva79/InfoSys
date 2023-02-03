@@ -1,9 +1,20 @@
-*
-{
+* {
     margin: 0;
     padding: 0;
-}
-.container1 {
+    box-sizing: border-box; /*tells the browser to account for any border and padding in the values you specify*/
+    /*For eg, if our content takes more space including the padding, the browser allows it*/
+    /*written a bit in detail in my MST wala notebook, ask me if you dont understand*/
+  }
+  
+  body {
+    background-color: #ecdfc5;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+.nav_bar {
     /*Absolute means its position value is fixed*/
     /*Sticky means Relative(when normal) and Fixed (when scrolled) and the top,right,bottom, left values are active*/
     /*The top and left 0 means it'll stay at the top left corner*/
@@ -12,9 +23,9 @@
     position: static;
     top: 0;
     left: 0;
-    width: 90.2%;
+    width: 100%;
     padding: 30px 100px;
-    height: 120px;
+    height: 200px;
     background-color: #647b5a;
     z-index: 2;
     /*Wraps texts acc to screen size*/
@@ -25,7 +36,7 @@
     /*space-between ensures items will have space between them*/
     align-items: center;
   }
-  .container1 #logo {
+  .nav_bar #logo {
     color: #000000;
     font-weight: 700; /*thiccness of characters*/
     font-size: 2em; /*1em = 2 inches or 16 pixels*/
@@ -34,112 +45,34 @@
     text-transform: uppercase; /*controls text case*/
     text-decoration: none;
   }
-  .container1 ul {
+  .nav_bar ul {
     display: flex;
     justify-content: center; /*Aligns the list items in the center of container*/
     /*They were positioned on the top right before this*/
     list-style: none; /*Removes the bullet thingy from list*/
   }
-  .container1 ul li {
+  .nav_bar ul li {
     margin-left: 20px;
   }
-  .container1 ul li .links {
+  .nav_bar ul li .links {
     color: black;
     padding: 6px 15px;
     /*Removes the underling thingy from links*/
     text-decoration: none;
   }
-  .container1 ul li a:hover, .container1 ul li .products {
+  .nav_bar ul li a:hover, .nav_bar ul li .research {
     background-color: #fff;
     border-radius: 15px;
   }
 
 
-/* Cart */
-#cart-container table{
-    border-collapse: collapse;
-    table-layout: fixed;
-}
-
-.mid_body
-{
-    margin-top: 50px;
-    height: 550px;
-    position: static;
-}
-#cart-container table thead{
-    font-weight: 700;
-}
-#cart-container table thead td{
-    background:#6666;
-    color:black;
-    border:none;
-    padding: 6px 0;
-}
-#cart-container table td{
-    border: 1px solid #b6b3b3;
-    text-align: center;
-}
-#cart-container table td:nth-child(1){
-    width: 150px;
-}
-#cart-container table td:nth-child(2)
-#cart-container table td:nth-child(3){
-    width: 100px;
-
-}
-#cart-container table td:nth-child(4)
-#cart-container table td:nth-child(5){
-  width: 100px;
-}
-#cart-container table tbody img{
-    width: 100px;
-    height: 80px;
-    object-fit: cover;
-}
-td input{
-width:35px ;
-height: 20px;
-padding: 5px;
-}
-  /* Customer query and order summary*/ 
-.Note{
-    border: 1px solid #b6b3b3;
-}
-.Total{
-    border: 1px solid #b6b3b3;
-}
-#Customer{
-    justify-content: flex;
-
-}
-.buttons{
-    display:flex;
-    flex-wrap: wrap;
-    margin-top: 10px;
-}
-.buttons a{
-    flex:2 2 16px;
-    padding: 10px;
-    font-size: 15px;
-    color:honeydew;
-    border: 1px solid #444;
-    background-color:#2183a2;
-}
-
-.Customer
-{
-    display: flex;
-}
-
-.Customer .Note, .Customer  .Total
-{
-    flex: 50%;
-}
 
 
 
-.footer {
+  /*footer part*/
+
+
+  .footer {
     z-index: 2; /*this overlaps over the image*/
   }
   .footer footer {
@@ -192,3 +125,6 @@ padding: 5px;
     text-decoration: none; /*removes underlined thingy from link*/
     color: #cecece;
   }
+
+
+  
